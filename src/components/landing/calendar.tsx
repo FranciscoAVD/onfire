@@ -1,13 +1,7 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { cn } from "@/lib/utils";
-import { startOfWeek, addDays, format, lightFormat, getDay } from "date-fns"
-const bundles = [
-    { lessons: 1, price: 30, discount: 0 },
-    { lessons: 5, price: 135, discount: 10 },
-    { lessons: 10, price: 270, discount: 10 },
-    { lessons: 15, price: 380, discount: 15 },
-    { lessons: 20, price: 500, discount: 17 },
-]
+import { startOfWeek, addDays, format } from "date-fns"
+
 export default function Calendar() {
     const today = new Date();
     const startOfWeekDate = startOfWeek(today, { weekStartsOn: 1 }); // Set Monday as the start of the week
